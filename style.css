@@ -123,15 +123,23 @@ h2 {
 /* قسم المهارات (Skills) - قائمة المهارات الأخرى */
 .skills-list {
     list-style: none;
+    padding-left: 0;
 }
 
 .skills-list li {
     margin-bottom: 0.6rem;
+    padding-left: 30px; /* مسافة للأيقونة والفراغ */
+    text-indent: -30px;
 }
 
 .skills-list i {
     margin-right: 8px;
     color: var(--accent-color); 
+    text-indent: 0; /* إلغاء خاصية text-indent على الأيقونة */
+}
+
+.skills-list li span {
+    display: block;
 }
 
 /* قسم التواصل (Connect) */
