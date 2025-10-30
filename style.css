@@ -406,21 +406,47 @@ h2 {
     background-color: #333;
 }
 
-/* تنسيق رسالة النجاح (UX Enhancement) */
+/* تنسيق رسائل النجاح (اللون الأخضر) والخطأ (الأحمر) */
 .form-message {
     margin-top: 15px;
-    padding: 10px 15px;
-    background-color: #e6f7ff; 
-    color: #004d99; 
-    border: 1px solid #b3e0ff;
-    border-radius: 4px;
-    font-weight: 500;
-    opacity: 0; /* نبدأ بإخفاء الرسالة */
-    transition: opacity 0.5s ease-in-out;
+    padding: 12px; /* تم زيادة الـ padding قليلاً */
+    border-radius: 6px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.95rem;
+    opacity: 0; 
+    transition: all 0.4s ease; /* هذا السطر هو مفتاح التلاشي! */
+    max-height: 0;
+    overflow: hidden;
+    /* إضافة Box-shadow خفيف لتحسين التباين */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08); 
 }
 
+/* رسالة النجاح - اللون الأخضر المتناسق */
 .form-message.success {
+    /* خلفية خضراء فاتحة جداً (مائلة للبياض) */
+    background-color: #e6ffed; 
+    /* نص أخضر داكن يوفر تباينًا ممتازًا */
+    color: #007c3e; 
+    /* إطار أخضر داكن */
+    border: 1px solid #007c3e;
+    opacity: 1; 
+    max-height: 200px;
+}
+
+/* رسالة الخطأ (للتكامل) */
+.form-message.error {
+    background-color: #ffeaea; /* خلفية حمراء فاتحة */
+    color: #c90000; /* نص أحمر داكن */
+    border: 1px solid #c90000;
     opacity: 1;
+    max-height: 200px;
+}
+
+.form-message.success,
+.form-message.error {
+    opacity: 1; /* عند إضافة هذا الكلاس، سيبدأ الانتقال */
+    max-height: 200px;
 }
 
 /* ------------------------------------- */
